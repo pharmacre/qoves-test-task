@@ -1,0 +1,12 @@
+$color-ink: #101010;
+$color-paper: #f3f1eb;
+$color-muted: #706f6b;
+$font-sans: var(--font-neue-montreal), Arial, Helvetica, sans-serif;
+$font-mono: var(--font-zagma-mono), "Courier New", monospace;
+$content-width: 1200px;
+$gutter: clamp(1.25rem, 4vw, 4rem);
+
+@mixin container {
+  width: min(100% - (2 * #{$gutter}), #{$content-width});
+  margin-inline: auto;
+}
