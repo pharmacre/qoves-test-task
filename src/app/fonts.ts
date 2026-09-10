@@ -52,17 +52,17 @@ export const zagmaMono = localFont({
     },
     {
       path: "../assets/fonts/zagma-mono/F37ZagmaMonoTrial-Book.otf",
-      weight: "350",
+      weight: "400",
       style: "normal",
     },
     {
       path: "../assets/fonts/zagma-mono/F37ZagmaMonoTrial-BookItalic.otf",
-      weight: "350",
+      weight: "400",
       style: "italic",
     },
     {
       path: "../assets/fonts/zagma-mono/F37ZagmaMonoTrial-Regular.otf",
-      weight: "400",
+      weight: "500",
       style: "normal",
     },
     {

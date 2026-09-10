@@ -2,6 +2,16 @@
 @use "tokens" as *;
 
 :root {
+  --color-border-primary-muted: #f2f2f2;
+  --color-bg-base: #fff;
+  --color-bg-secondary-hover: #afc2c9;
+  --color-primary-400: #9aaeb5;
+  --color-step-hover-start: #a3a29f;
+  --color-step-hover-middle: #999e9e;
+  --color-step-hover-end: #91a5aa;
+  --color-border-primary: #d7e5eb;
+  --color-accent-warm: #a37156;
+
   color-scheme: light;
   color: $color-ink;
   background: $color-paper;
@@ -14,35 +24,8 @@ body {
   font-family: $font-sans;
 }
 
-.brief {
-  @include container;
-  display: grid;
-  align-content: center;
-  min-height: 100svh;
-  padding-block: 4rem;
-
-  &__eyebrow {
-    margin-bottom: 1.5rem;
-    color: $color-muted;
-    font-family: $font-mono;
-    font-size: 0.875rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    max-width: 12ch;
-    font-size: clamp(3rem, 9vw, 8rem);
-    font-weight: 500;
-    letter-spacing: -0.06em;
-    line-height: 0.9;
-  }
-
-  &__copy {
-    max-width: 38rem;
-    margin-top: 2rem;
-    color: $color-muted;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.5;
-  }
+main {
+  width: 100%;
+  margin-inline: auto;
+  background: var(--color-bg-base);
 }

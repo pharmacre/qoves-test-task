@@ -1,0 +1,330 @@
+@use "../../styles/tokens" as *;
+
+.section {
+  --line: #e4ebed;
+  --blue: #a7bbc0;
+  display: block;
+  color: #27353a;
+}
+
+.heading {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  padding: 4px 12px 2px;
+  border: 1px solid rgba(199, 209, 213, 0.3);
+  border-radius: 99px;
+  color: #9aaeb5;
+  font-family: $font-mono;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 14px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -1.5%;
+  line-height: 56px;
+
+  span {
+    color: var(--blue);
+  }
+}
+
+.description {
+  color: #697174;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1.03fr) minmax(0, 1fr);
+  align-items: stretch;
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+}
+
+.portraitCard {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 0.875;
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 12px;
+  background: var(--color-bg-base);
+
+  figcaption {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    color: var(--color-bg-base);
+    font-family: $font-mono;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.5%;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.portraitCrop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--color-bg-secondary-hover);
+
+  img {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.portraitImage {
+  object-position: center bottom;
+}
+
+.flow {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.icons {
+  position: absolute;
+  width: 452px;
+}
+
+.bottomIcon {
+  position: absolute;
+  top: 264px;
+  left: -0.5px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.topIcon {
+  position: absolute;
+  top: 100px;
+  left: -0.5px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  rotate: 180deg;
+}
+
+.highlightTopLine {
+  position: absolute;
+  top: 223px;
+  width: 174px;
+  left: 30px;
+}
+
+.highlightBottomLine {
+  position: absolute;
+  width: 174px;
+  top: 259px;
+  right: -6px;
+  z-index: 2;
+}
+
+.topDot {
+  z-index: 1;
+  width: 18px;
+  position: absolute;
+  top: 222px;
+  left: 190px;
+}
+
+.bottomDot {
+  z-index: 1;
+  width: 18px;
+  position: absolute;
+  top: 320px;
+  right: -8px;
+}
+
+.leftMask {
+  position: absolute;
+  width: 18px;
+  height: 180px;
+  top: 124px;
+  left: -4px;
+}
+
+.rightMask {
+  width: 30px;
+  height: 280px;
+  position: absolute;
+  top: 92px;
+  right: -10px;
+  transform: rotate(5deg);
+}
+
+.flowGraphic {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.steps {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  li {
+    position: relative;
+    min-width: 0;
+    padding: 0 16px;
+  }
+
+  li + li::before {
+    position: absolute;
+    top: -16px;
+    bottom: -16px;
+    left: 0;
+    width: 1px;
+    background: var(--color-border-primary-muted);
+    content: "";
+  }
+
+  .stepCard {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 152px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 12px;
+    color: #27353a;
+    background: var(--color-bg-base);
+    box-shadow:
+      inset 0 0 0 1px #e5e9e9,
+      0 20px 32px -20px rgba(0, 0, 0, 0);
+    text-align: left;
+    transition:
+      color 0.3s var(--ease-out-quart, cubic-bezier(0.165, 0.84, 0.44, 1)),
+      box-shadow 0.3s var(--ease-out-quart, cubic-bezier(0.165, 0.84, 0.44, 1));
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        var(--color-step-hover-start) 0%,
+        var(--color-step-hover-middle) 55%,
+        var(--color-step-hover-end) 100%
+      );
+      content: "";
+      opacity: 0;
+      transition: opacity 0.3s var(--ease-out-quart, cubic-bezier(0.165, 0.84, 0.44, 1));
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .stepCard:hover {
+    color: var(--color-bg-base);
+    box-shadow:
+      inset 0 0 0 1px transparent,
+      0 20px 32px -20px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .number {
+      background: rgba(255, 255, 255, 0.24);
+    }
+  }
+}
+
+.number {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-bg-base);
+  background: #9fb6bc;
+  font-size: 12px;
+  transition: background-color 0.3s var(--ease-out-quart, cubic-bezier(0.165, 0.84, 0.44, 1));
+}
+
+.stepLabel {
+  max-width: 245px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+@media (max-width: 1100px) {
+  .comparison {
+    grid-template-columns: minmax(0, 1fr) minmax(170px, 0.82fr) minmax(0, 1fr);
+  }
+
+  .steps {
+    .stepCard {
+      min-height: 135px;
+      padding: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section *,
+  .section *::before,
+  .section *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
