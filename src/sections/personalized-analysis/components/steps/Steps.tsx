@@ -1,6 +1,6 @@
 import { personalizedAnalysisContent as content } from "@/constants/personalized-analysis";
 
-import styles from "../PersonalizedAnalysis.module.scss";
+import styles from "./Steps.module.scss";
 
 export function Steps() {
   return (

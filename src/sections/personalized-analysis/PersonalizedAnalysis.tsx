@@ -5,9 +5,9 @@ import { useRef } from "react";
 import { GridRow } from "@/components/grid-row/GridRow";
 import { useEntranceAnimation } from "@/hooks/useEntranceAnimation";
 
-import { FaceComparison } from "./components/FaceComparison";
-import { Heading } from "./components/Heading";
-import { Steps } from "./components/Steps";
+import { FaceComparison } from "./components/face-comparsion/FaceComparison";
+import { Heading } from "./components/heading/Heading";
+import { Steps } from "./components/steps/Steps";
 import styles from "./PersonalizedAnalysis.module.scss";
 
 export function PersonalizedAnalysis() {

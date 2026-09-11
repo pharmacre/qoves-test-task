@@ -9,7 +9,7 @@ import { FlowDotIcon } from "@/components/icons/FlowDotIcon";
 import { FlowLineIcon } from "@/components/icons/FlowLineIcon";
 import { FlowMaskIcon } from "@/components/icons/FlowMaskIcon";
 import { FlowTopHighlightIcon } from "@/components/icons/FlowTopHighlightIcon";
-import styles from "../PersonalizedAnalysis.module.scss";
+import styles from "./FaceComparison.module.scss";
 
 export function FaceComparison() {
   return (
