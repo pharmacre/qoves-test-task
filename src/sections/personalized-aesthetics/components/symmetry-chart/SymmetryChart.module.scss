@@ -1,0 +1,69 @@
+@use "../../../../styles/tokens" as *;
+
+.symmetry {
+  right: -86px;
+  width: 284px;
+  bottom: 0;
+  height: 46%;
+  container-type: inline-size;
+  padding: 0;
+}
+.axisLabels {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: 7.5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 0;
+  font-family: $font-mono;
+  font-size: 7px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.symmetryPlot {
+  position: absolute;
+  top: 8.5%;
+  left: 3%;
+  right: 3%;
+  height: 75%;
+}
+.symmetryMarker {
+  position: absolute;
+  height: 0;
+  border-top: 0.2cqw dashed #d7e5eb;
+  pointer-events: none;
+}
+.symmetryBadge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 1cqw;
+  padding: 0.65cqw 0.8cqw;
+  border: 0.15cqw solid #e5eaed;
+  border-radius: 0.8cqw;
+  background: #fff;
+  color: #515255;
+  font-family: $font-mono;
+  font-size: 1.9cqw;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.symmetryBadge i {
+  flex-shrink: 0;
+  width: 1.2cqw;
+  height: 1.2cqw;
+  border-radius: 0.2cqw;
+  box-shadow: 0 0 0 0.5cqw #f8f9fa;
+}
+@media (max-width: 767px) {
+  .symmetry {
+    height: 150px;
+  }
+}

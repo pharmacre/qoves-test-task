@@ -10,20 +10,6 @@
   text-align: center;
 }
 
-.eyebrow {
-  padding: 4px 12px 2px;
-  border: 1px solid rgba(199, 209, 213, 0.3);
-  border-radius: 99px;
-  color: var(--color-text-disabled);
-  font-family: $font-mono;
-  font-size: $text-xs;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  line-height: $line-height-xs;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-
 .title {
   font-size: $text-lg;
   font-weight: 400;

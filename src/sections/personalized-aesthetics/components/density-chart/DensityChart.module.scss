@@ -1,0 +1,29 @@
+@use "../../../../styles/tokens" as *;
+
+.density {
+  transform: translateX(50%);
+  left: 24px;
+  width: 284px;
+  height: 59%;
+}
+.densityPlot {
+  height: 74%;
+}
+.densityPlot :global(.recharts-surface) {
+  overflow: visible;
+}
+.axisLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 4px;
+  font-family: $font-mono;
+  font-size: 6px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .density {
+    height: 150px;
+  }
+}

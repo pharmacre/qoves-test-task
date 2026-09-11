@@ -1,0 +1,152 @@
+@use "../../../../styles/tokens" as *;
+
+.pigment {
+  right: 212px;
+  width: 270px;
+  height: 100%;
+  container-type: inline-size;
+}
+.caption {
+  left: 2.4%;
+  right: 2.4%;
+  bottom: 2.3%;
+  min-height: 6.3%;
+  display: flex;
+  align-items: center;
+  padding: 1.8cqw;
+  font-size: 3.2cqw;
+  line-height: 1.2;
+  border-radius: 1.2cqw;
+}
+.pigmentPlot {
+  position: absolute;
+  top: 6%;
+  left: 48.8%;
+  height: 81.7%;
+  width: 2.4%;
+  border: 0.15cqw solid #dce4e780;
+}
+.pigmentLabels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: $font-sans;
+  font-size: 2cqw;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+.pigmentLabels span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  transform: translateY(-50%);
+}
+.pigmentLabels span::before {
+  content: "";
+  width: 3.4cqw;
+  border-top: 0.2cqw solid #d5dddf99;
+}
+.pigmentLabels span:nth-child(odd) {
+  left: 51.6%;
+}
+.pigmentLabels span:nth-child(even) {
+  right: 51.6%;
+  flex-direction: row-reverse;
+}
+.pigmentLabels span:nth-child(1) {
+  top: 13.5%;
+}
+.pigmentLabels span:nth-child(2) {
+  top: 35.7%;
+}
+.pigmentLabels span:nth-child(3) {
+  top: 57.9%;
+}
+.pigmentLabels span:nth-child(4) {
+  top: 80.1%;
+}
+.eyeMarker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 0.2cqw dashed #eef4f680;
+  pointer-events: none;
+  font-family: $font-mono;
+  font-size: 6px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.eyeMarker > span {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #515255;
+  border: 0.15cqw solid #e7ebed;
+  border-radius: 0.8cqw;
+  padding: 0.5cqw 0.8cqw;
+  font-size: 1.8cqw;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.eyeMarker > span:first-child {
+  right: 53.4%;
+  display: flex;
+  align-items: center;
+  gap: 0.8cqw;
+}
+.eyeMarker > span:nth-child(2) {
+  left: 72%;
+}
+.eyeMarker i {
+  width: 1.2cqw;
+  height: 1.2cqw;
+  border-radius: 0.2cqw;
+  box-shadow: 0 0 0 0.5cqw #f8f8f8;
+}
+.eyeMarker::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+  border-block: 0.65cqw solid transparent;
+  border-right: 0.9cqw solid #d7e5eb;
+}
+.eyeSelection {
+  position: absolute;
+  left: 48.45%;
+  top: 0;
+  transform: translateY(-50%);
+  width: 3.1%;
+  height: 10.6cqw;
+  border: 0.15cqw solid #d7e5eb99;
+  border-radius: 0.3cqw;
+  background: #d7e5eb15;
+}
+.eyeSelection::before,
+.eyeSelection::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.7cqw;
+  height: 0.7cqw;
+  background: #d7e5eb;
+  transform: translateY(-50%) rotate(45deg);
+}
+.eyeSelection::before {
+  left: -0.4cqw;
+}
+.eyeSelection::after {
+  right: -0.4cqw;
+}
+@media (max-width: 767px) {
+  .pigment {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    height: 100%;
+  }
+}

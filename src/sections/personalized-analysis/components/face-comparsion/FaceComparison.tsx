@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import portraitAfter from "@/assets/images/first_section_face_after.png";
-import portraitBefore from "@/assets/images/first_section_face_before.png";
+import portraitAfter from "@/assets/images/personalized-analysis/face_after.png";
+import portraitBefore from "@/assets/images/personalized-analysis/face_before.png";
 import { personalizedAnalysisContent as content } from "@/constants/personalized-analysis";
 
 import { FlowBottomHighlightIcon } from "@/components/icons/FlowBottomHighlightIcon";

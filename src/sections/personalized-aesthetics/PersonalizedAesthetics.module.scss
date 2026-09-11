@@ -1,0 +1,127 @@
+@use "../../styles/tokens" as *;
+
+.section {
+  --eyebrow-color: #fff;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 50% 29%, #928780 0%, transparent 48%),
+    radial-gradient(ellipse at 50% 100%, #546268 0%, transparent 56%), #9aaeb5;
+}
+
+.heading {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 56px 24px 0;
+  text-align: center;
+
+  h2 {
+    font-size: $text-lg;
+    font-weight: 400;
+    line-height: $line-height-lg;
+    letter-spacing: -0.025em;
+  }
+  h2 span {
+    color: #ffffff80;
+  }
+  > p:last-child {
+    color: #e0dddd;
+    font-size: $text-sm;
+    line-height: $line-height-md;
+  }
+}
+
+.eyebrow {
+  color: var(--color-text-button-primary);
+}
+.visual {
+  position: relative;
+  height: 620px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.face {
+  position: absolute;
+  z-index: 1;
+  width: 732px;
+  height: auto;
+  top: -112px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.charts {
+  position: absolute;
+  top: 126px;
+  left: 0;
+  right: 0;
+  max-height: 336px;
+  height: 100%;
+}
+
+@media (max-width: 1700px) and (min-width: 768px) {
+  .visual {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1099px) {
+  .visual {
+    height: 540px;
+    width: 96%;
+  }
+  .face {
+    width: 560px;
+  }
+  .charts {
+    top: 95px;
+    height: 310px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading {
+    padding-top: 40px;
+    gap: 16px;
+  }
+  .heading h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .heading > p:last-child {
+    font-size: 15px;
+    line-height: 22px;
+    max-width: 440px;
+  }
+  .lineBreak {
+    display: none;
+  }
+  .visual {
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .face {
+    position: relative;
+    order: -1;
+    width: min(90%, 460px);
+    left: auto;
+    transform: none;
+    align-self: center;
+  }
+  .charts {
+    position: relative;
+    inset: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 16px 32px;
+  }
+}
