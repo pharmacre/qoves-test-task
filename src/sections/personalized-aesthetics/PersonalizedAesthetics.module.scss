@@ -2,6 +2,7 @@
 
 .section {
   --eyebrow-color: #fff;
+  position: relative;
   overflow: hidden;
   color: #fff;
   background:
@@ -11,7 +12,7 @@
 
 .heading {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;

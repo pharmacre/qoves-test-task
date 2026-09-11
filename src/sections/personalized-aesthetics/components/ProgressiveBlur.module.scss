@@ -1,0 +1,27 @@
+.blur {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: none;
+  width: 400px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.left {
+  left: 0;
+  mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.right {
+  right: 0;
+  mask-image: linear-gradient(to left, #000 0%, transparent 100%);
+}
+
+@media (min-width: 1440px) {
+  .blur {
+    display: block;
+    backdrop-filter: blur(8px);
+  }
+}

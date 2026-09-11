@@ -4,6 +4,7 @@ import face from "@/assets/images/personalized-aesthetics/face.png";
 import { Eyebrow } from "@/components/eyebrow/Eyebrow";
 
 import { AnalysisCharts } from "./components/AnalysisCharts";
+import { ProgressiveBlur } from "./components/ProgressiveBlur";
 import styles from "./PersonalizedAesthetics.module.scss";
 
 export function PersonalizedAesthetics() {
@@ -28,6 +29,8 @@ export function PersonalizedAesthetics() {
           sizes="(max-width: 767px) 90vw, 650px"
         />
       </div>
+      <ProgressiveBlur side="left" />
+      <ProgressiveBlur side="right" />
     </section>
   );
 }
