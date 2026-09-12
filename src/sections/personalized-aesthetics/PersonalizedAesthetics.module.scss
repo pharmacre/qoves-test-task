@@ -6,6 +6,12 @@
   overflow: hidden;
   color: #fff;
   background:
+    radial-gradient(
+      ellipse 23% 65% at 50% 80%,
+      rgb(146, 135, 128) 5%,
+      rgb(52, 48, 45) 2%,
+      transparent 76%
+    ),
     radial-gradient(ellipse at 50% 29%, #928780 0%, transparent 48%),
     radial-gradient(ellipse at 50% 100%, #546268 0%, transparent 56%), #9aaeb5;
 }
@@ -29,7 +35,8 @@
   h2 span {
     color: #ffffff80;
   }
-  > p:last-child {
+  .defaultDescription,
+  .mobileDescription {
     color: #e0dddd;
     font-size: $text-sm;
     line-height: $line-height-md;
@@ -37,7 +44,10 @@
 }
 
 .eyebrow {
-  color: var(--color-text-button-primary);
+  color: #e0dddd;
+}
+.mobileDescription {
+  display: none;
 }
 .visual {
   position: relative;
@@ -79,7 +89,8 @@
     font-size: 40px;
     line-height: 48px;
   }
-  .heading > p:last-child {
+  .defaultDescription,
+  .mobileDescription {
     max-width: 560px;
     font-size: 14px;
     line-height: 20px;
@@ -95,19 +106,25 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1099px) {
+@media (max-width: 1099px) {
   .section {
     background:
       radial-gradient(
-        ellipse 58% 62% at 50% 42%,
+        ellipse 250% 50% at 50% 70%,
+        rgb(31 40 43 / 26%) 0%,
+        rgb(31 40 43 / 14%) 50%,
+        transparent 76%
+      ),
+      radial-gradient(
+        ellipse 100% 50% at 50% 40%,
         #928780 0%,
-        rgb(146 135 128 / 100%) 20%,
+        rgb(146 135 128 / 100%) 30%,
         transparent 100%
       ),
       radial-gradient(
         ellipse 76% 48% at 50% 100%,
         #546268 0%,
-        rgb(84 98 104 / 10%) 250%,
+        rgb(84 98 104 / 20%) 250%,
         transparent 100%
       ),
       #9aaeb5;
@@ -125,37 +142,48 @@
 
 @media (max-width: 767px) {
   .heading {
-    gap: 22px;
-    padding: 92px 20px 0;
+    gap: 16px;
+    padding: 80px 20px 0;
   }
   .heading h2 {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 36px;
   }
-  .heading > p:last-child {
-    font-size: 15px;
-    line-height: 22px;
-    max-width: 340px;
+  .heading .defaultDescription,
+  .heading .mobileDescription {
+    max-width: 343px;
+    color: rgb(224 221 221 / 70%);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .defaultDescription {
+    display: none;
+  }
+  .mobileDescription {
+    display: block;
   }
   .lineBreak {
     display: none;
   }
   .visual {
     width: calc(100% - 32px);
-    height: 576px;
-    margin-top: 54px;
+    height: calc(144.3vw - 46px);
+    margin-top: 24px;
   }
   .face {
     position: absolute;
-    top: 75px;
+    top: 0;
     left: 50%;
-    width: min(110vw, 460px);
-    transform: translateX(-50%);
+    width: 100%;
+    max-width: none;
+    transform: translateX(-50%) scale(1.1);
+    transform-origin: top center;
   }
   .charts {
     position: absolute;
     inset: 0;
     height: 370px;
     padding: 0;
+    container-type: inline-size;
   }
 }

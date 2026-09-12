@@ -154,7 +154,15 @@
 @media (max-width: 767px) {
   .pigment {
     top: 0;
-    width: calc(50% - 6px);
-    height: 181px;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 157;
+  }
+  .caption,
+  .pigmentLabels,
+  .eyeMarker,
+  .eyeMarker > span {
+    font-size: 4px;
+    white-space: nowrap;
   }
 }

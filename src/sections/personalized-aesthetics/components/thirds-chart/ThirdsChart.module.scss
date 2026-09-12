@@ -59,8 +59,15 @@
 }
 @media (max-width: 767px) {
   .thirds {
-    top: 283px;
-    width: calc(50% - 6px);
-    height: 87px;
+    top: 72.01cqw;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 76;
+  }
+  .smallTitle,
+  .thirdLabels,
+  .values {
+    font-size: 4px;
+    white-space: nowrap;
   }
 }

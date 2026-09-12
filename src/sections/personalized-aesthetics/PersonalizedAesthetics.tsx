@@ -15,9 +15,13 @@ export function PersonalizedAesthetics() {
         <h2 id="aesthetics-title">
           Your complete <span>facial analysis</span>
         </h2>
-        <p>
+        <p className={styles.defaultDescription}>
           Every face is unique. We assess more than 100 unique facial markers to
           <br className={styles.lineBreak} /> give you a precise understanding of your aesthetics.
+        </p>
+        <p className={styles.mobileDescription}>
+          Every face is unique. We analyze 163 aspects of your face to understand your personal
+          facial aesthetics.
         </p>
       </div>
       <div className={styles.visual}>

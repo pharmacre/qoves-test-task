@@ -90,8 +90,26 @@
 }
 @media (max-width: 767px) {
   .fullness {
-    top: 189px;
-    width: calc(50% - 6px);
-    height: 181px;
+    top: 50.15cqw;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 157;
+  }
+  .caption {
+    display: block;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    height: 10px;
+    min-height: 0;
+    padding: 2px 3px;
+    font-size: 4px;
+    line-height: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .matrix > span {
+    font-size: 4px;
   }
 }

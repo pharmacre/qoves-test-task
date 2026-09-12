@@ -120,8 +120,18 @@
 }
 @media (max-width: 767px) {
   .lips {
-    top: 113px;
-    width: calc(50% - 6px);
-    height: 68px;
+    top: 28.57cqw;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 66;
+  }
+  .smallTitle,
+  .lipLabels,
+  .lipIndicator span {
+    font-size: 4px;
+    white-space: nowrap;
+  }
+  .lips strong {
+    font-size: 12px;
   }
 }

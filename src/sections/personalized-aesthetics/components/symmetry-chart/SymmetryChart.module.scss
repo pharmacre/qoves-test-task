@@ -73,8 +73,14 @@
 }
 @media (max-width: 767px) {
   .symmetry {
-    top: 189px;
-    width: calc(50% - 6px);
-    height: 86px;
+    top: 48.1cqw;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 74;
+  }
+  .axisLabels,
+  .symmetryBadge {
+    font-size: 4px;
+    white-space: nowrap;
   }
 }

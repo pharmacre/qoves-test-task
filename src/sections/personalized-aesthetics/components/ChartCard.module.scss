@@ -20,6 +20,9 @@
   border-radius: 3px;
   font-size: 10px;
   line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 1099px) {
@@ -34,8 +37,15 @@
     transform: none;
   }
   .caption {
-    font-size: 9px;
-    line-height: 12px;
+    display: block;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    height: 10px;
+    min-width: 0;
+    padding: 2px 3px;
+    font-size: 4px;
+    line-height: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

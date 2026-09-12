@@ -33,7 +33,16 @@
 }
 @media (max-width: 767px) {
   .density {
-    width: calc(50% - 6px);
-    height: 105px;
+    width: 40cqw;
+    height: auto;
+    aspect-ratio: 137 / 90;
+  }
+  .densityPlot {
+    height: 63%;
+  }
+  .axisLabels {
+    gap: 2px;
+    font-size: 4px;
+    white-space: nowrap;
   }
 }
