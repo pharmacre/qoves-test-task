@@ -22,8 +22,18 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (max-width: 1099px) {
+  .density {
+    top: 0;
+    left: 0;
+    width: 284px;
+    height: 198px;
+    transform: none;
+  }
+}
 @media (max-width: 767px) {
   .density {
-    height: 150px;
+    width: calc(50% - 6px);
+    height: 105px;
   }
 }

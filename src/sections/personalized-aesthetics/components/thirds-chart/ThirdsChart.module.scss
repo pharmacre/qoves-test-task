@@ -49,8 +49,18 @@
   font-weight: 500;
   margin-top: 1.5cqw;
 }
+@media (max-width: 1099px) {
+  .thirds {
+    top: 537px;
+    right: 0;
+    width: 284px;
+    height: 165px;
+  }
+}
 @media (max-width: 767px) {
   .thirds {
-    height: 150px;
+    top: 283px;
+    width: calc(50% - 6px);
+    height: 87px;
   }
 }

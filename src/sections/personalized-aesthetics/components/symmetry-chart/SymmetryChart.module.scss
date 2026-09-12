@@ -62,8 +62,19 @@
   border-radius: 0.2cqw;
   box-shadow: 0 0 0 0.5cqw #f8f9fa;
 }
+@media (max-width: 1099px) {
+  .symmetry {
+    top: 362px;
+    right: 0;
+    bottom: auto;
+    width: 284px;
+    height: 155px;
+  }
+}
 @media (max-width: 767px) {
   .symmetry {
-    height: 150px;
+    top: 189px;
+    width: calc(50% - 6px);
+    height: 86px;
   }
 }

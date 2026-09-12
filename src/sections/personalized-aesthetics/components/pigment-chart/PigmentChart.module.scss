@@ -143,10 +143,18 @@
 .eyeSelection::after {
   right: -0.4cqw;
 }
+@media (max-width: 1099px) {
+  .pigment {
+    top: 0;
+    right: 0;
+    width: 270px;
+    height: 337px;
+  }
+}
 @media (max-width: 767px) {
   .pigment {
-    grid-column: 1;
-    grid-row: 3 / 5;
-    height: 100%;
+    top: 0;
+    width: calc(50% - 6px);
+    height: 181px;
   }
 }

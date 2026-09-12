@@ -30,10 +30,7 @@
 }
 @media (max-width: 767px) {
   .card {
-    position: relative;
-    inset: auto;
-    width: auto;
-    height: 190px;
+    position: absolute;
     transform: none;
   }
   .caption {

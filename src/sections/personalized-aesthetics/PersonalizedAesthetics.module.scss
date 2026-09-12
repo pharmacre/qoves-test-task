@@ -71,23 +71,62 @@
 }
 
 @media (max-width: 1099px) {
-  .visual {
-    height: 540px;
-    width: 96%;
+  .heading {
+    gap: 16px;
+    padding-top: 80px;
   }
-  .face {
-    width: 560px;
+  .heading h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .heading > p:last-child {
+    max-width: 560px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .visual {
+    width: calc(100% - 40px);
+    height: 850px;
+    margin-top: 55px;
   }
   .charts {
-    top: 95px;
-    height: 310px;
+    top: 0;
+    height: 800px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .section {
+    background:
+      radial-gradient(
+        ellipse 58% 62% at 50% 42%,
+        #928780 0%,
+        rgb(146 135 128 / 100%) 20%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 76% 48% at 50% 100%,
+        #546268 0%,
+        rgb(84 98 104 / 10%) 250%,
+        transparent 100%
+      ),
+      #9aaeb5;
+  }
+
+  .face {
+    top: -80px;
+    left: 52%;
+    width: 810px;
+    max-width: none;
+    transform: translateX(-50%);
+    transform-origin: top center;
   }
 }
 
 @media (max-width: 767px) {
   .heading {
-    padding-top: 40px;
-    gap: 16px;
+    gap: 22px;
+    padding: 92px 20px 0;
   }
   .heading h2 {
     font-size: 36px;
@@ -96,33 +135,27 @@
   .heading > p:last-child {
     font-size: 15px;
     line-height: 22px;
-    max-width: 440px;
+    max-width: 340px;
   }
   .lineBreak {
     display: none;
   }
   .visual {
-    width: 100%;
-    height: auto;
-    margin-top: 24px;
-    display: flex;
-    flex-direction: column;
+    width: calc(100% - 32px);
+    height: 576px;
+    margin-top: 54px;
   }
   .face {
-    position: relative;
-    order: -1;
-    width: min(90%, 460px);
-    left: auto;
-    transform: none;
-    align-self: center;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    width: min(110vw, 460px);
+    transform: translateX(-50%);
   }
   .charts {
-    position: relative;
-    inset: auto;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    padding: 0 16px 32px;
+    position: absolute;
+    inset: 0;
+    height: 370px;
+    padding: 0;
   }
 }

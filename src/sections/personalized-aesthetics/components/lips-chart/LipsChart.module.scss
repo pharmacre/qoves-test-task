@@ -108,8 +108,20 @@
   right: auto;
   left: 2.7cqw;
 }
+@media (max-width: 1099px) {
+  .lips {
+    top: 218px;
+    bottom: auto;
+    left: 0;
+    width: 284px;
+    height: 124px;
+    transform: none;
+  }
+}
 @media (max-width: 767px) {
   .lips {
-    height: 150px;
+    top: 113px;
+    width: calc(50% - 6px);
+    height: 68px;
   }
 }

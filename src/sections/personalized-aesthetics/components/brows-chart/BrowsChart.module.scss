@@ -80,10 +80,18 @@
 .verticalAxis {
   transform: translateY(-50%) rotate(90deg);
 }
+@media (max-width: 1099px) {
+  .fullness {
+    top: 362px;
+    left: 0;
+    width: 285px;
+    height: 337px;
+  }
+}
 @media (max-width: 767px) {
   .fullness {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    height: 100%;
+    top: 189px;
+    width: calc(50% - 6px);
+    height: 181px;
   }
 }
