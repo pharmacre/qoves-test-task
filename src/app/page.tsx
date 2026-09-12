@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <main>
       <PersonalizedAnalysis />
-      <Spacing desktopOnly />
+      <Spacing />
       <PersonalizedAesthetics />
       <Spacing />
     </main>
