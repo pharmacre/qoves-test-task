@@ -1,0 +1,13 @@
+.collapse {
+  position: relative;
+  z-index: 1;
+  height: 0;
+  overflow: hidden;
+  will-change: height, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapse {
+    transition: none;
+  }
+}
