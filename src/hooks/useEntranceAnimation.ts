@@ -17,13 +17,6 @@ export function useEntranceAnimation(scope: RefObject<HTMLElement | null>) {
         ease: "power3.out",
       });
 
-      gsap.from("[data-flow-graphic]", {
-        autoAlpha: 0,
-        scale: 0.98,
-        duration: 0.8,
-        delay: 0.35,
-        ease: "power3.out",
-      });
     },
     { scope },
   );

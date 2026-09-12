@@ -1,0 +1,49 @@
+.flow {
+  position: relative;
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-color: var(--color-border-primary);
+    border-style: solid;
+    content: "";
+  }
+
+  &::before {
+    top: 12px;
+    left: -1px;
+    height: calc(46% - 12px);
+    border-width: 0 0 1.5px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  &::after {
+    bottom: 12px;
+    left: -1px;
+    height: calc(46% - 12px);
+    border-width: 1.5px 0 0;
+    border-radius: 22px 22px 0 0;
+  }
+}
+
+.leftBarrier {
+  position: absolute;
+  top: 189px;
+  left: 400px;
+  width: 104px;
+  height: 134px;
+  transform: rotate(-3deg);
+}
+
+.rightBarrier {
+  position: absolute;
+  z-index: 1;
+  top: 198px;
+  right: 400px;
+  width: 102px;
+  height: 158px;
+  transform: rotate(-182deg);
+}

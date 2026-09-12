@@ -1,0 +1,31 @@
+.border {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  inset: 16px;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.head {
+  fill: #869aa1;
+  filter: drop-shadow(0 0 2px rgba(134, 154, 161, 0.6));
+}
+
+.tailLayer {
+  fill: none;
+  stroke: #869aa1;
+  stroke-width: 1;
+  stroke-linecap: round;
+  opacity: 0.1;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tailLayer,
+  .head {
+    display: none;
+  }
+}
