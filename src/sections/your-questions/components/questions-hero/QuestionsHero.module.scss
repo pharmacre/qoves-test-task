@@ -161,6 +161,20 @@
   }
 }
 
+@media (max-width: 767px) {
+  .firstPanel {
+    grid-template-rows: minmax(auto, 1fr) auto;
+    align-items: stretch;
+    gap: 64px;
+    min-height: 100dvh;
+    padding-bottom: 40px;
+  }
+
+  .intro {
+    align-self: end;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1099px) {
   .firstPanel {
     min-height: 100svh;

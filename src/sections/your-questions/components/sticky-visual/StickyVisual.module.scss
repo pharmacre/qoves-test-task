@@ -22,6 +22,7 @@
   background:
     linear-gradient(180deg, rgb(8 9 8 / 16%) 0%, transparent 30%, rgb(5 5 4 / 26%) 100%),
     rgb(12 11 9 / calc(0.3 + var(--visual-progress) * 0.42));
+  -webkit-backdrop-filter: blur(calc(var(--visual-progress) * 28px));
   backdrop-filter: blur(calc(var(--visual-progress) * 28px));
   will-change: backdrop-filter;
 }
@@ -39,6 +40,10 @@
 }
 
 @media (max-width: 1099px) {
+  .stickyVisual {
+    height: 100dvh;
+  }
+
   .video {
     object-position: 52% center;
   }
