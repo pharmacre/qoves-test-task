@@ -1,15 +1,22 @@
 .comparison {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 1.03fr) minmax(0, 1fr);
-  align-items: stretch;
   margin: 0;
   padding: 16px;
   width: 100%;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1.03fr) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 @media (max-width: 1100px) {
-  .comparison {
+  .content {
     grid-template-columns: minmax(0, 1fr) minmax(170px, 0.82fr) minmax(0, 1fr);
   }
 }

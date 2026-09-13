@@ -7,9 +7,10 @@ type PortraitCardProps = Readonly<{
   label: string;
   alt: string;
   side: "left" | "right";
+  onLoad?: () => void;
 }>;
 
-export function PortraitCard({ image, label, alt, side }: PortraitCardProps) {
+export function PortraitCard({ image, label, alt, side, onLoad }: PortraitCardProps) {
   return (
     <figure className={`${styles.card} ${styles[side]}`}>
       <figcaption>{label}</figcaption>
@@ -21,6 +22,8 @@ export function PortraitCard({ image, label, alt, side }: PortraitCardProps) {
           priority
           placeholder="blur"
           sizes="(min-width: 1200px) 460px, 31vw"
+          onLoad={onLoad}
+          onError={onLoad}
         />
       </div>
     </figure>
