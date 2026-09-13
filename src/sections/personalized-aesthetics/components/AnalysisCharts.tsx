@@ -8,7 +8,7 @@ import { ThirdsChart } from "./thirds-chart/ThirdsChart";
 
 export function AnalysisCharts() {
   return (
-    <div className={styles.charts}>
+    <div className={styles.charts} data-analysis-charts>
       <BrowsChart />
       <DensityChart />
       <LipsChart />

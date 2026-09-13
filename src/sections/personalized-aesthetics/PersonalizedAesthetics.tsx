@@ -1,15 +1,23 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 
 import face from "@/assets/images/personalized-aesthetics/face.png";
 import { Eyebrow } from "@/components/eyebrow/Eyebrow";
+import { useChartsEntranceAnimation } from "@/hooks/useChartsEntranceAnimation";
 
 import { AnalysisCharts } from "./components/AnalysisCharts";
 import { ProgressiveBlur } from "./components/ProgressiveBlur";
 import styles from "./PersonalizedAesthetics.module.scss";
 
 export function PersonalizedAesthetics() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useChartsEntranceAnimation(sectionRef);
+
   return (
-    <section className={styles.section} aria-labelledby="aesthetics-title">
+    <section ref={sectionRef} className={styles.section} aria-labelledby="aesthetics-title">
       <div className={styles.heading}>
         <Eyebrow className={styles.eyebrow}>Personalized aesthetics</Eyebrow>
         <h2 id="aesthetics-title">

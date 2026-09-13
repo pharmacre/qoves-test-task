@@ -20,6 +20,7 @@ export function ChartCard({
   return (
     <div
       className={`${styles.card} ${className}`}
+      data-analysis-chart
       role="group"
       aria-label={label}
       tabIndex={0}
