@@ -19,7 +19,7 @@ export function PortraitCard({ image, label, alt, side }: PortraitCardProps) {
           src={image}
           alt={alt}
           priority
-          unoptimized
+          placeholder="blur"
           sizes="(min-width: 1200px) 460px, 31vw"
         />
       </div>
