@@ -1,0 +1,51 @@
+.stickyVisual {
+  position: sticky;
+  z-index: 0;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: #27251f;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  transform: scale(calc(1.025 + var(--visual-progress) * 0.055));
+  will-change: transform;
+}
+
+.videoShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(8 9 8 / 16%) 0%, transparent 30%, rgb(5 5 4 / 26%) 100%),
+    rgb(12 11 9 / calc(0.3 + var(--visual-progress) * 0.42));
+  backdrop-filter: blur(calc(var(--visual-progress) * 28px));
+  will-change: backdrop-filter;
+}
+
+.grid {
+  --color-border-primary-muted: rgb(255 255 255 / 38%);
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+
+  > div,
+  .gridCanvas {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1099px) {
+  .video {
+    object-position: 52% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video {
+    transform: scale(1.05);
+  }
+}

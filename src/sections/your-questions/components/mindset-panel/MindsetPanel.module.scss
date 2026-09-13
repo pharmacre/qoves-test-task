@@ -1,0 +1,348 @@
+.secondPanel {
+  position: relative;
+  width: min(calc(100% - 80px), 1360px);
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 220vh;
+  height: 220svh;
+  margin-inline: auto;
+}
+
+.secondStage {
+  position: sticky;
+  isolation: isolate;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.mindsetTextLayer,
+.mindsetBlurLayer {
+  --list-card-width: 443px;
+  --list-card-height: 400px;
+  --consider-card-x: 44px;
+  --principles-card-x: 44px;
+  position: absolute;
+  inset: 0;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.mindsetTextLayer {
+  z-index: 1;
+  mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  mask-position:
+    0 0,
+    left var(--consider-card-x) top
+      calc(100% + 24px + var(--consider-card-y) + var(--list-card-height)),
+    right var(--principles-card-x) top
+      calc(100% + 24px + var(--principles-card-y) + var(--list-card-height));
+  mask-size:
+    100% 100%,
+    var(--list-card-width) var(--list-card-height),
+    var(--list-card-width) var(--list-card-height);
+  mask-composite: exclude;
+  -webkit-mask-image:
+    linear-gradient(#000 0 0), linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  -webkit-mask-position:
+    0 0,
+    left var(--consider-card-x) top
+      calc(100% + 24px + var(--consider-card-y) + var(--list-card-height)),
+    right var(--principles-card-x) top
+      calc(100% + 24px + var(--principles-card-y) + var(--list-card-height));
+  -webkit-mask-size:
+    100% 100%,
+    var(--list-card-width) var(--list-card-height),
+    var(--list-card-width) var(--list-card-height);
+  -webkit-mask-composite: xor;
+}
+
+.mindsetBlurLayer {
+  z-index: 2;
+  mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  mask-position:
+    left var(--consider-card-x) top
+      calc(100% + 24px + var(--consider-card-y) + var(--list-card-height)),
+    right var(--principles-card-x) top
+      calc(100% + 24px + var(--principles-card-y) + var(--list-card-height));
+  mask-size:
+    var(--list-card-width) var(--list-card-height),
+    var(--list-card-width) var(--list-card-height);
+  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  -webkit-mask-position:
+    left var(--consider-card-x) top
+      calc(100% + 24px + var(--consider-card-y) + var(--list-card-height)),
+    right var(--principles-card-x) top
+      calc(100% + 24px + var(--principles-card-y) + var(--list-card-height));
+  -webkit-mask-size:
+    var(--list-card-width) var(--list-card-height),
+    var(--list-card-width) var(--list-card-height);
+
+  .mindsetHeading {
+    filter: blur(6px);
+  }
+}
+
+.mindsetHeading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 549px;
+  opacity: var(--mindset-heading-opacity);
+  transform: translate(-50%, var(--mindset-heading-y));
+  text-align: center;
+  text-wrap: balance;
+  will-change: opacity, transform;
+
+  h2 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+
+    span {
+      display: block;
+      color: rgb(255 255 255 / 50%);
+    }
+  }
+
+  p {
+    width: 528px;
+    margin: 20px auto 0;
+    color: rgb(255 255 255 / 70%);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.mindsetCards {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  opacity: var(--mindset-cards-opacity);
+  will-change: opacity;
+}
+
+.listCard {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 443px;
+  height: 400px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(32px);
+
+  h3 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+  }
+
+  ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+    background: rgb(255 255 255 / 10%);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.considerCard {
+  top: calc(100% + 24px);
+  left: 44px;
+  transform: translate3d(0, var(--consider-card-y), 0);
+  will-change: transform;
+}
+
+.principlesCard {
+  top: calc(100% + 24px);
+  right: 44px;
+  transform: translate3d(0, var(--principles-card-y), 0);
+  will-change: transform;
+}
+
+@media (max-width: 1099px) {
+  .secondPanel {
+    width: 100%;
+    min-height: 118svh;
+    height: 118svh;
+  }
+
+  .secondStage {
+    position: relative;
+    display: flex;
+    height: 118svh;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20vh 0 20px;
+  }
+
+  .mindsetHeading {
+    position: static;
+    width: calc(100% - 48px);
+    margin-inline: auto;
+    opacity: 1;
+    transform: none;
+
+    h2 {
+      font-size: 31px;
+      line-height: 34px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 350px;
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .mindsetTextLayer {
+    position: static;
+    mask: none;
+    -webkit-mask: none;
+  }
+
+  .mindsetBlurLayer {
+    display: none;
+  }
+
+  .mindsetCards {
+    position: static;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 36px;
+    padding-inline: 44px;
+    overflow-x: auto;
+    opacity: 1;
+    scroll-padding-inline: 44px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .listCard {
+    position: static;
+    flex: 0 0 min(80vw, 310px);
+    width: auto;
+    height: 260px;
+    min-width: min(80vw, 310px);
+    scroll-snap-align: start;
+    transform: none;
+
+    h3 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .secondPanel,
+  .secondStage {
+    min-height: 0;
+    height: auto;
+  }
+
+  .secondStage {
+    justify-content: flex-start;
+    padding: 256px 0 20px;
+  }
+
+  .mindsetCards {
+    gap: 16px;
+    padding-inline: 32px;
+    scroll-padding-inline: 32px;
+  }
+
+  .listCard {
+    flex-basis: 277px;
+    width: 277px;
+    height: 320px;
+    min-width: 277px;
+
+    h3 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    li {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .secondPanel,
+  .secondStage {
+    min-height: 100svh;
+    height: 100svh;
+  }
+
+  .secondStage {
+    padding: 18vh 0 24px;
+  }
+
+  .mindsetHeading {
+    h2 {
+      width: min(100%, 396px);
+      margin-inline: auto;
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    p {
+      max-width: 528px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .mindsetCards {
+    gap: 16px;
+    margin-top: 40px;
+    padding-inline: 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  .listCard {
+    flex-basis: 443px;
+    width: 443px;
+    height: 400px;
+    min-width: 443px;
+
+    h3 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+}

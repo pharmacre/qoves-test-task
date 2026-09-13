@@ -1,0 +1,39 @@
+.section {
+  --scroll-progress: 0;
+  --visual-progress: var(--scroll-progress);
+  --mindset-heading-opacity: 0;
+  --mindset-heading-y: 36px;
+  --mindset-cards-opacity: 1;
+  --consider-card-y: 0px;
+  --principles-card-y: 0px;
+  position: relative;
+  min-height: 320svh;
+  overflow: clip;
+  color: #fff;
+  background: #171714;
+}
+
+.story {
+  position: relative;
+  z-index: 1;
+  margin-top: -100vh;
+  margin-top: -100svh;
+}
+
+@media (max-width: 1099px) {
+  .section {
+    min-height: 218svh;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .section {
+    min-height: 200svh;
+  }
+}
